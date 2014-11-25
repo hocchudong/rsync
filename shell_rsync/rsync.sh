@@ -1,11 +1,8 @@
 #!/bin/bash
-source config.cfg
+source /root/shell_rsync/config.cfg
 
 mkdir -p /root/backup_data/{controller,compute,network}
 
-#ssh-keygen -R root@$CONTROLLER
-#ssh-keygen -R root@$COMPUTE
-#ssh-keygen -R root@$NETWORK
 
 apt-get install sshpass
 
