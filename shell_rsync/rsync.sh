@@ -3,9 +3,9 @@ source config.cfg
 
 mkdir -p /root/backup_data/{controller,compute,network}
 
-ssh-keygen -R root@$CONTROLLER
-ssh-keygen -R root@$COMPUTE
-ssh-keygen -R root@$NETWORK
+#ssh-keygen -R root@$CONTROLLER
+#ssh-keygen -R root@$COMPUTE
+#ssh-keygen -R root@$NETWORK
 
 sshpass -p $PASSCONT rsync -avz --delete -e ssh root@$CONTROLLER:$SRCCONT $DESTCONT
 sshpass -p $PASSCOM rsync -avz --delete -e ssh root@$COMPUTE:$SRCCOM $DESTCOM
