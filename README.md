@@ -24,7 +24,7 @@ Cài đặt rất đơn giản, đối với Ubuntu:
 Tham số **-r** để đồng bộ thư mục. <br>
 Hoặc với **-a** 
 
-    rsync -r dir1/ dir2
+    rsync -a dir1/ dir2
     
 sẽ cho phép đồng bộ cả group, owner, và permissions của dir1 sang dir2. Tham số này được sử dụng phổ biến hơn.
 ##
@@ -122,3 +122,11 @@ Tùy chọn này giống **--delete**, nhưng nó cho phép liệt kê những f
 ###
 Trên đây là một số trường hợp thường dùng với rsync, có thể sử dụng lệnh man để biết thêm các tham số khác.
 
+#### Update
+Làm thế nào để hệ thống backup một cách tự động bằng rsync?
+Mặc định thì rsync không hỗ trợ đặt lịch tự động backup, do đó ta cần dùng một tool bổ trợ khác. <br>
+Để giải quyết bài toán trên thì có thể chia ra thành 2 bài toán chi tiết hơn:
+- Thứ nhất là làm thế nào để backup tự động sau một khoảng thời gian nhất định? Trả lời: Dùng crontab <br>
+- Thứ hai là làm thế nào để backup tự động mỗi khi có dữ liệu được đẩy vảo thư mục chứa dữ liệu cần backup? Trả lời: Dùng incron. <br>
+Cách dùng crontab: [**link**](https://help.ubuntu.com/community/CronHowto) <br>
+Cách dùng incron: [**link**](http://www.cyberciti.biz/faq/linux-inotify-examples-to-replicate-directories/)
