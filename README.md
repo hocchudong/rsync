@@ -64,8 +64,7 @@ Và output khi không có dấu "/":
     . . .  
 
 ##### 2. Đồng bộ hóa từ xa
-Chỉ có thể sử dụng rsync để đồng bộ hóa từ xa khi cả 2 máy đều đã cài SSH.
-##
+
 Cú pháp câu lệnh:
 
     rsync -a ~/dir1/ username@DEST_host:~/dir2
