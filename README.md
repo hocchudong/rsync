@@ -113,10 +113,11 @@ Nếu thư mục đích đã có dữ liệu thì theo mặc định, rsync sẽ
     rsync -a --delete SRC DEST
 ##
 **--exclude**: <br>
-Tùy chọn này giống **--delete**, nhưng nó cho phép liệt kê những file hay thư mục muốn xóa chứ không xóa toàn bộ.
+Với tùy chọn này, người dùng có thể bỏ qua một số file mà mình không muốn đồng bộ. 
 
     rsync -a --exclude=file1,file2,flie3... SRC DEST
 
+Sau khi thực hiện câu lệnh trên, hệ thống sẽ đồng bộ thư mục SRC đến thư mục DEST trừ file1, file2, file3...
 ###
 ###
 Trên đây là một số trường hợp thường dùng với rsync, có thể sử dụng lệnh man để biết thêm các tham số khác.
